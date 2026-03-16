@@ -1,6 +1,6 @@
 # @philiprehberger/ts-mask-kit
 
-[![CI](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/publish.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/ts-mask-kit.svg)](https://www.npmjs.com/package/@philiprehberger/ts-mask-kit)
 [![License](https://img.shields.io/github/license/philiprehberger/ts-mask-kit)](LICENSE)
 
@@ -38,6 +38,15 @@ logger.info('Request', safe);
 | `maskCustom(str, options?)` | Custom masking with position control |
 | `maskObject(obj, { rules })` | Deep-walk and mask matching keys |
 | `detectType(value)` | Auto-detect value type |
+
+
+## Development
+
+```bash
+npm install
+npm run build
+npm test
+```
 
 ## License
 
