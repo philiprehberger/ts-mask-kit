@@ -1,21 +1,21 @@
-# @philiprehberger/mask-kit
+# @philiprehberger/ts-mask-kit
 
-[![CI](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@philiprehberger/mask-kit.svg)](https://www.npmjs.com/package/@philiprehberger/mask-kit)
-[![License](https://img.shields.io/github/license/philiprehberger/mask-kit)](LICENSE)
+[![CI](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@philiprehberger/ts-mask-kit.svg)](https://www.npmjs.com/package/@philiprehberger/ts-mask-kit)
+[![License](https://img.shields.io/github/license/philiprehberger/ts-mask-kit)](LICENSE)
 
 Data masking and redaction for logs and APIs.
 
 ## Installation
 
 ```bash
-npm install @philiprehberger/mask-kit
+npm install @philiprehberger/ts-mask-kit
 ```
 
 ## Usage
 
 ```ts
-import { maskEmail, maskCreditCard, maskObject } from '@philiprehberger/mask-kit';
+import { maskEmail, maskCreditCard, maskObject } from '@philiprehberger/ts-mask-kit';
 
 maskEmail('user@example.com');     // "u***@e******.com"
 maskCreditCard('4111111111111111'); // "************1111"
