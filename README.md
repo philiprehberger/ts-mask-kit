@@ -1,5 +1,9 @@
 # @philiprehberger/mask-kit
 
+[![CI](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@philiprehberger/mask-kit.svg)](https://www.npmjs.com/package/@philiprehberger/mask-kit)
+[![License](https://img.shields.io/github/license/philiprehberger/mask-kit)](LICENSE)
+
 Data masking and redaction for logs and APIs.
 
 ## Installation
