@@ -1,9 +1,8 @@
 # @philiprehberger/mask-kit
 
-[![CI](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/mask-kit.svg)](https://www.npmjs.com/package/@philiprehberger/mask-kit)
-[![License](https://img.shields.io/github/license/philiprehberger/ts-mask-kit)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/mask-kit)](https://github.com/philiprehberger/mask-kit/commits/main)
 
 Data masking and redaction for logs and APIs
 
@@ -40,7 +39,6 @@ logger.info('Request', safe);
 | `maskObject(obj, { rules })` | Deep-walk and mask matching keys |
 | `detectType(value)` | Auto-detect value type |
 
-
 ## Development
 
 ```bash
@@ -49,6 +47,24 @@ npm run build
 npm test
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/mask-kit)
+
+🐛 [Report issues](https://github.com/philiprehberger/mask-kit/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/mask-kit/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)
