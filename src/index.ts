@@ -1,4 +1,4 @@
-export { maskEmail, maskCreditCard, maskPhone, maskToken, maskIP, maskCustom } from './mask';
-export { maskObject } from './mask-object';
+export { maskEmail, maskCreditCard, maskPhone, maskToken, maskIP, maskCustom, maskFormatPreserving, revealFirst, revealLast, maskByPattern } from './mask';
+export { maskObject, maskDeep } from './mask-object';
 export { detectType } from './detect';
-export type { MaskOptions, MaskRule, DetectedType } from './types';
+export type { MaskOptions, FormatPreservingOptions, RevealOptions, MaskByPatternOptions, MaskRule, DetectedType } from './types';

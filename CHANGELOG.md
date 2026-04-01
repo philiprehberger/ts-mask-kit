@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0
+
+- Add format-preserving masks that keep delimiters intact
+- Add configurable reveal count with revealFirst/revealLast
+- Add regex-based masking for custom data patterns
+- Add deep object masking with recursive traversal
+
 ## 0.1.4
 
 - Standardize README to 3-badge format with emoji Support section

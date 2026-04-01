@@ -26,6 +26,87 @@ const safe = maskObject(requestBody, {
 logger.info('Request', safe);
 ```
 
+### Format-Preserving Masks
+
+Keep delimiters and separators in place while masking alphanumeric characters:
+
+```ts
+import { maskFormatPreserving } from '@philiprehberger/mask-kit';
+
+maskFormatPreserving('(555) 123-4567');
+// "(***) ***-****"
+
+maskFormatPreserving('(555) 123-4567', { revealLast: 4 });
+// "(***) ***-4567"
+
+maskFormatPreserving('4111-2222-3333-4444', { revealLast: 4, revealFirst: 4 });
+// "4111-****-****-4444"
+```
+
+### Configurable Reveal Count
+
+Control exactly how many characters remain visible:
+
+```ts
+import { revealFirst, revealLast } from '@philiprehberger/mask-kit';
+
+revealFirst('secretdata', 3);   // "sec*******"
+revealLast('secretdata', 4);    // "******data"
+revealFirst('abc', 5);          // "abc" (no masking if count >= length)
+revealLast('token_xyz', 3, { char: '#' }); // "######xyz"
+```
+
+### Regex-Based Masking
+
+Mask substrings that match a regular expression:
+
+```ts
+import { maskByPattern } from '@philiprehberger/mask-kit';
+
+// Mask all digits
+maskByPattern('Order #12345 shipped', /\d+/);
+// "Order #***** shipped"
+
+// Mask email-like patterns in free text
+maskByPattern('Contact user@mail.com for info', /[^\s@]+@[^\s@]+/);
+// "Contact ************* for info"
+
+// Mask SSN patterns
+maskByPattern('SSN: 123-45-6789', /\d{3}-\d{2}-\d{4}/);
+// "SSN: ***********"
+```
+
+### Deep Object Masking
+
+Recursively traverse nested objects and arrays, masking values by key name:
+
+```ts
+import { maskDeep } from '@philiprehberger/mask-kit';
+
+const input = {
+  user: {
+    name: 'Alice',
+    password: 'hunter2',
+    addresses: [
+      { street: '123 Main St', ssn: '999-00-1234' },
+    ],
+  },
+  apiKey: 'sk-abc123',
+};
+
+maskDeep(input, ['password', 'ssn', 'apiKey']);
+// {
+//   user: {
+//     name: 'Alice',
+//     password: '*******',
+//     addresses: [
+//       { street: '123 Main St', ssn: '***********' },
+//     ],
+//   },
+//   apiKey: '********',
+// }
+```
+
 ## API
 
 | Function | Description |
@@ -36,7 +117,12 @@ logger.info('Request', safe);
 | `maskToken(token)` | Show first/last 4 chars |
 | `maskIP(ip)` | Mask middle octets |
 | `maskCustom(str, options?)` | Custom masking with position control |
-| `maskObject(obj, { rules })` | Deep-walk and mask matching keys |
+| `maskFormatPreserving(value, options?)` | Mask alphanumeric chars while keeping delimiters |
+| `revealFirst(value, count, options?)` | Reveal first N characters, mask the rest |
+| `revealLast(value, count, options?)` | Reveal last N characters, mask the rest |
+| `maskByPattern(value, regex, options?)` | Mask substrings matching a regex pattern |
+| `maskObject(obj, { rules })` | Deep-walk and mask matching keys with auto-detection |
+| `maskDeep(obj, sensitiveKeys, options?)` | Recursively mask values by key name |
 | `detectType(value)` | Auto-detect value type |
 
 ## Development
