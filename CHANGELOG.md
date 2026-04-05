@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Fix README GitHub URLs to use correct repo name (ts-mask-kit)
+
 ## 0.2.0
 
 - Add format-preserving masks that keep delimiters intact

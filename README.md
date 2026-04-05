@@ -1,8 +1,8 @@
 # @philiprehberger/mask-kit
 
-[![CI](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/mask-kit/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-mask-kit/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/mask-kit.svg)](https://www.npmjs.com/package/@philiprehberger/mask-kit)
-[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/mask-kit)](https://github.com/philiprehberger/mask-kit/commits/main)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/ts-mask-kit)](https://github.com/philiprehberger/ts-mask-kit/commits/main)
 
 Data masking and redaction for logs and APIs
 
@@ -137,11 +137,11 @@ npm test
 
 If you find this project useful:
 
-⭐ [Star the repo](https://github.com/philiprehberger/mask-kit)
+⭐ [Star the repo](https://github.com/philiprehberger/ts-mask-kit)
 
-🐛 [Report issues](https://github.com/philiprehberger/mask-kit/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+🐛 [Report issues](https://github.com/philiprehberger/ts-mask-kit/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 
-💡 [Suggest features](https://github.com/philiprehberger/mask-kit/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+💡 [Suggest features](https://github.com/philiprehberger/ts-mask-kit/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 
 ❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
 
